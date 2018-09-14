@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/components/UserLogin'
-import UserDasboard from '@/components/UserDashboard'
+import UserDashboard from '@/components/UserDashboard'
 import DesignerDashboard from '@/components/DesignerDashboard'
 
 Vue.use(Router)
@@ -14,9 +14,9 @@ export default new Router({
       component: Login
     },
     {
-      path: '/user-dasboard',
-      name: 'UserDasboard',
-      component: UserDasboard
+      path: '/user-dashboard',
+      name: 'UserDashboard',
+      component: UserDashboard
     },
     {
       path: '/designer-dashboard',

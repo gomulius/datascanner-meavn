@@ -1,3 +1,31 @@
-.user-left-menu {
+.bm-burger-button {
+  cursor: pointer;
+  height: 30px;
+  left: 263px;
+  position: fixed;
+  top: 10px;
+  width: 36px;
+  z-index: 1500;
+}
 
+.bm-burger-bars {
+  background-color: #fff;
+}
+
+.bm-item-list > * {
+  display: block;
+  margin-left: -30px;
+}
+
+.app-sidebar__user {
+  margin-left: -30px;
+  display: flex;
+}
+
+.app-sidebar__user-avatar {
+  width: 70px;
+}
+
+.app-menu__label{
+  margin-left: 10px;
 }

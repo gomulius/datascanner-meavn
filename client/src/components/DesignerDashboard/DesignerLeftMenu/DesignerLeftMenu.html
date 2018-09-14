@@ -1,5 +1,23 @@
+<!-- Sidebar menu-->
+<div>
+    <div id="sideNav" class="bm-menu" v-bind="this.$attrs" @openMenu="push" @closeMenu="pull">
+        <nav class="bm-item-list">
+            <slot>    <!-- User Info -->
+              <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+                <div>
+                  <p class="app-sidebar__user-name">John Doe</p>
+                  <p class="app-sidebar__user-designation">Frontend Developer</p>
+                </div>
+              </div>
+              <!-- Menu Content -->
+              <ul class="app-menu">
+                  <li><router-link to="/user-dashboard" class="app-menu__item"><i class="app-menu__icon fa fa-th"></i><span class="app-menu__label"> User Dashboard</span></router-link></li>
+              </ul>
+            </slot>
+        </nav>
+    </div>
 
-<section class="designer-left-menu">
-  <h1>designer-left-menu Component</h1>
-</section>
-
+    <div class="bm-burger-button" @click="toggleMenu()">
+        <span class="bm-burger-bars line-style" :style="{top:20 * (index * 2) + '%'}" v-for="(x, index) in 3" :key="index"></span>
+    </div>
+</div>
