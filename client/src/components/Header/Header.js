@@ -4,7 +4,8 @@ export default {
   props: [],
   data () {
     return {
-
+      isNotificationVisible : false,
+      isSettingsVisible: false
     }
   },
   computed: {
