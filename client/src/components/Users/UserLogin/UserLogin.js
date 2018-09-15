@@ -14,6 +14,8 @@ export default {
 
   },
   methods: {
-
+    navigate(link){
+      this.$router.push(link)
+    }
   }
 }
