@@ -5,6 +5,7 @@ import UserDashboard from '@/components/UserDashboard'
 import DesignerDashboard from '@/components/DesignerDashboard'
 import PasswordReset from '@/components/Users/PasswordReset'
 import AddNewUser from '@/components/Users/AddNewUser'
+import UserProfile from '@/components/Header/UserProfile'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/add-new-user',
       name: 'AddNewUser',
       component: AddNewUser
+    },
+    {
+      path: '/user-profile',
+      name: 'UserProfile',
+      component: UserProfile
     }
   ]
 })

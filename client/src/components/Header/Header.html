@@ -1,6 +1,6 @@
 <section class="header">
     <!-- Navbar-->
-    <header class="app-header"><router-link to="/"><img src="../../img/data-scanner-logo.png" style="max-height: 60px;"></router-link>
+    <header class="app-header"><router-link to="/"><img src="../../img/data-scanner-logo-300px.png" style="max-height: 60px;"></router-link>
       <!-- Navbar Right Menu-->
       <ul class="app-nav">
         <li class="app-search">
@@ -52,8 +52,8 @@
         <li class="dropdown" @mouseover="isSettingsVisible = true" @mouseleave="isSettingsVisible = false" @click="isSettingsVisible = true"><span class="app-nav__item" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></span>
           <ul class="dropdown-menu settings-menu dropdown-menu-right" v-bind:class="{ show: isSettingsVisible }">
             <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
-            <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
-            <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+            <li><router-link class="dropdown-item" to="user-profile"><i class="fa fa-user fa-lg"></i> Profile</router-link></li>
+            <li><router-link class="dropdown-item" to="/"><i class="fa fa-sign-out fa-lg"></i> Logout</router-link></li>
           </ul>
         </li>
       </ul>

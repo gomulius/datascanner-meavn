@@ -1,5 +1,115 @@
-
-<section class="user-profile">
-  <h1>user-profile Component</h1>
-</section>
-
+<div>
+    <app-header/>
+    <app-userleftmenu/>
+    <main class="app-content">
+      <div class="row user">
+        <div class="col-md-12">
+          <div class="profile">
+            <div class="info"><img class="user-img" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/128.jpg">
+              <h4>John Doe</h4>
+              <p>FrontEnd Developer</p>
+            </div>
+            <div class="cover-image"></div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6">
+              <div class="tile">
+                <div class="tile-title-w-btn">
+                    <h3 class="title">About you</h3>
+                    <div class="btn-group"><span class="btn btn-primary" @click="edit = true"><i class="fa fa-lg fa-edit"></i></span></div>
+                </div><hr>
+                <form class="form-horizontal">
+                  <div class="form-group row">
+                    <label class="control-label col-md-3">Name</label>
+                    <div class="col-md-8">
+                      <input class="form-control col-md-8" type="text" placeholder="Enter full name" :disabled="edit == false">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="control-label col-md-3">Email</label>
+                    <div class="col-md-8">
+                      <input class="form-control col-md-8" type="email" placeholder="Enter email address" :disabled="edit == false">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="control-label col-md-3">Gender</label>
+                    <div class="col-md-9">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="gender" :disabled="edit == false">Male
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="radio" name="gender" :disabled="edit == false">Female
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div class="tile-footer" v-if="edit"><span class="btn btn-secondary" @click="edit = false" style="margin-right: 20px;">Cancel</span><span class="btn btn-primary">SAVE</span></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="tile">
+                <div class="tile-title-w-btn">
+                    <h3 class="title">Password change</h3>
+                </div><hr>
+                <form class="form-horizontal">
+                  <div class="form-group row">
+                    <label class="control-label col-md-3">Enter old password</label>
+                    <div class="col-md-8">
+                      <input class="form-control col-md-8" type="password" placeholder="Enter old password">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="control-label col-md-3">Enter new password</label>
+                    <div class="col-md-8">
+                      <input class="form-control col-md-8" type="password" placeholder="Enter new password">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label class="control-label col-md-3">Re-enter new password</label>
+                    <div class="col-md-8">
+                      <input class="form-control col-md-8" type="password" placeholder="Re-enter new password">
+                    </div>
+                  </div>
+                </form>
+                <div class="tile-footer"><span class="btn btn-secondary" @click="edit = false" style="margin-right: 20px;">Cancel</span><span class="btn btn-primary">SAVE</span></div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="col-md-6">
+              <div class="tile">
+                <h3 class="tile-title">Submit feedback</h3><hr>
+                <div class="tile-body"><p>Please let us know how you find our platform. If you like it we will appreciate a positive word from you, if you think it can be improved, please submit your suggestion and if you don't like it, please do not hesitate to tell us why. We value your opinion.</p></div>
+                <form class="form-horizontal">
+                    <div class="form-group row">
+                      <div class="col-md-8">
+                          <textarea class="form-control col-md-12" rows="4" placeholder="Enter your comment"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                <div class="tile-footer"><a class="btn btn-primary" href="#">Submit</a></div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="tile">
+                <h3 class="tile-title">Invite friend</h3><hr>
+                <form class="form-horizontal">
+                    <div class="form-group row">
+                      <label class="control-label col-md-3">Enter your friend email address</label>
+                      <div class="col-md-8">
+                        <input class="form-control col-md-8" type="password" placeholder="Enter email address">
+                      </div>
+                    </div>
+                  </form>
+                <div class="tile-footer"><a class="btn btn-primary" href="#">Submit invitation</a></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </main>
+  </div>
