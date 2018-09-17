@@ -10,6 +10,7 @@ import UserProfile from '@/components/Header/UserProfile'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',

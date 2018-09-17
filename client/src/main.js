@@ -28,8 +28,10 @@ import './css/main.css'
 //import './js/plugins/select2.min.js'
 
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
+Vue.prototype.$serverUrl = 'http://localhost:8081';
+
 
 /* eslint-disable no-new */
 new Vue({

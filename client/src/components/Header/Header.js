@@ -5,7 +5,8 @@ export default {
   data () {
     return {
       isNotificationVisible : false,
-      isSettingsVisible: false
+      isSettingsVisible: false,
+      isUserVisible: false
     }
   },
   computed: {
