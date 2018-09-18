@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import BootstrapVue from 'bootstrap-vue'
+import swal from 'sweetalert'
+import Vuelidate from 'vuelidate'
 
 import './js/plugins/sweetalert.min.js'
 import './css/main.css'
@@ -30,6 +32,7 @@ import './css/main.css'
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
+Vue.use(Vuelidate);
 Vue.prototype.$serverUrl = 'http://localhost:8081';
 
 

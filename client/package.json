@@ -17,9 +17,11 @@
     "axios": "^0.18.0",
     "bootstrap-vue": "^2.0.0-rc.11",
     "jquery": "^3.3.1",
+    "sweetalert": "^2.1.0",
     "vue": "^2.5.2",
     "vue-burger-menu": "^1.0.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuelidate": "^0.7.4"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -56,7 +58,7 @@
     "html-webpack-plugin": "^2.30.1",
     "jest": "^22.0.4",
     "jest-serializer-vue": "^0.3.0",
-    "nightwatch": "^0.9.12",
+    "nightwatch": "^0.9.21",
     "node-notifier": "^5.1.2",
     "node-sass": "^4.9.3",
     "optimize-css-assets-webpack-plugin": "^3.2.0",

@@ -6,65 +6,41 @@
       <div class="logo">
         <img src="@/img/data-scanner-logo.png" style="max-height: 70px;">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-4">
           <div class="tile">
             <h3 class="tile-title">REGISTER</h3>
             <div class="tile-body">
-              <form class="form-horizontal">
-                <div class="form-group row">
-                  <label class="control-label col-md-3">Name</label>
-                  <div class="col-md-8">
-                    <input class="form-control" type="text" placeholder="Enter full name">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="control-label col-md-3">Email</label>
-                  <div class="col-md-8">
-                    <input class="form-control col-md-8" type="email" placeholder="Enter email address">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="control-label col-md-3">Password</label>
-                  <div class="col-md-8">
-                      <input class="form-control col-md-8" type="password" placeholder="Create password">
-                  </div>
-                </div>
-                <div class="form-group row">
-                    <label class="control-label col-md-3">Re-enter Password</label>
-                    <div class="col-md-8">
-                        <input class="form-control col-md-8" type="password" placeholder="Re-enter password">
-                    </div>
-                  </div>
-                <div class="form-group row">
-                  <label class="control-label col-md-3">Gender</label>
-                  <div class="col-md-9">
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="gender">Male
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input class="form-check-input" type="radio" name="gender">Female
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-md-8 col-md-offset-3">
-                    <div class="form-check">
-                      <label class="form-check-label">
-                        <input class="form-check-input" type="checkbox">I accept the terms and conditions
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </form>
+              <!-- New user form -->
+              <b-form @submit="$v.$touch()" class="form-horizontal">
+                <b-form-group id="nameInputGroup" label="Full Name" label-for="nameInput">
+                  <b-form-input id="nameInput" type="text" v-model="form.name" :state="!$v.form.name.$invalid" aria-describedby="nameError" placeholder="Enter your full name" />
+                  <b-form-invalid-feedback id="nameError">This is a required field and must be at least 3 characters long</b-form-invalid-feedback>
+                </b-form-group>
+                <b-form-group id="emailInputGroup" label="Email Address" label-for="emailInput">
+                  <b-form-input id="emailInput" type="text" v-model="form.email" :state="!$v.form.email.$invalid" aria-describedby="emailError" placeholder="Enter your email address" />
+                  <b-form-invalid-feedback id="emailError">This is a required field</b-form-invalid-feedback>
+                </b-form-group>
+                <b-form-group id="passwordInputGroup" label="Enter Password" label-for="passwordInput">
+                  <b-form-input id="passwordInput" type="password" v-model="form.password" :state="!$v.form.password.$invalid" aria-describedby="passwordError" placeholder="Create new password" />
+                  <b-form-invalid-feedback id="passwordError">Password must be at least 8 characters long</b-form-invalid-feedback>
+                </b-form-group>
+                <b-form-group id="confirmPasswordInputGroup" label="Re-Enter Password" label-for="confirmPasswordInput">
+                  <b-form-input id="confirmPasswordInput" type="password" v-model="form.confirm_password" :state="!$v.form.confirm_password.$invalid" aria-describedby="confirmPasswordError" placeholder="Create new password" />
+                  <b-form-invalid-feedback id="confirmPasswordError">Passwords do not match</b-form-invalid-feedback>
+                </b-form-group>
+                <b-form-radio-group id="genderInputGroup" label="Your Gender" label-for="genderInput" v-model="form.gender">
+                  <b-form-radio type="radio" value="Male">Male</b-form-radio>
+                  <b-form-radio type="radio" value="Female">Female</b-form-radio>
+                </b-form-radio-group>
+                <br>
+                <b-form-checkbox id="checkbox1" v-model="form.tandc" :state="!$v.form.tandc.$invalid" value="accepted" unchecked-value="not_accepted" aria-describedby="tandcError">I accept the terms and use</b-form-checkbox>
+                <b-form-invalid-feedback id="tandcError">Please read and accept our Terms & Conditions</b-form-invalid-feedback>
+              </b-form>
             </div>
             <div class="tile-footer">
               <div class="row">
                 <div class="col-md-8 col-md-offset-3">
-                  <button class="btn btn-primary" type="button" @click="navigate('/')"><i class="fa fa-fw fa-lg fa-check-circle"></i>REGISTER</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-secondary"  @click="navigate('/')"><i class="fa fa-fw fa-lg fa-times-circle"></i>CANCEL</button>
+                  <button class="btn btn-primary" type="button" @click="submit()" :disabled="$v.form.$invalid"><i class="fa fa-fw fa-lg fa-check-circle"></i>REGISTER</button>&nbsp;&nbsp;&nbsp;<button class="btn btn-secondary"  @click="navigate('/')"><i class="fa fa-fw fa-lg fa-times-circle"></i>CANCEL</button>
                 </div>
               </div>
             </div>
