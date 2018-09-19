@@ -8,7 +8,6 @@ export default {
   components: {},
   props: [],
   data: () => ({
-    valid: true,
     name: '',
     email: '',
     password: '',

@@ -1,71 +1,95 @@
 <section class="header">
-    <!-- Navbar-->
-    <header class="app-header"><router-link to="/"><img src="../../img/data-scanner-logo-300px.png" style="max-height: 60px;"></router-link>
-      <!-- Navbar Right Menu-->
-      <ul class="app-nav">
-        <li class="app-search">
-          <input class="app-search__input" type="search" placeholder="Search">
-          <button class="app-search__button"><i class="fa fa-search"></i></button>
-        </li>
-        <!--Notification Menu-->
-        <li class="dropdown" @mouseover="isNotificationVisible = true" @mouseleave="isNotificationVisible = false"><span class="app-nav__item" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></span>
-          <ul class="app-notification dropdown-menu dropdown-menu-right" v-bind:class="{ show: isNotificationVisible }">
-            <li class="app-notification__title">You have 4 new notifications.</li>
+  <!-- Navbar-->
+  <div class="app-header">
+    <router-link to="/"><img src="../../img/data-scanner-logo-300px.png" style="max-height: 60px;"></router-link>
+    <!-- Navbar Right Menu-->
+    <ul class="app-nav">
+      <li class="app-search">
+        <input class="app-search__input" type="search" placeholder="Search">
+        <button class="app-search__button"><i class="fa fa-search"></i></button>
+      </li>
+      <!--Notification Menu-->
+      <li class="dropdown" @mouseover="isNotificationVisible = true" @mouseleave="isNotificationVisible = false"><span
+          class="app-nav__item" data-toggle="dropdown" aria-label="Show notifications"><i class="fa fa-bell-o fa-lg"></i></span>
+        <ul class="app-notification dropdown-menu dropdown-menu-right" v-bind:class="{ show: isNotificationVisible }">
+          <li class="app-notification__title">You have 4 new notifications.</li>
+          <div class="app-notification__content">
+            <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i
+                      class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
+                <div>
+                  <p class="app-notification__message">Lisa sent you a mail</p>
+                  <p class="app-notification__meta">2 min ago</p>
+                </div>
+              </a></li>
+            <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i
+                      class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
+                <div>
+                  <p class="app-notification__message">Mail server not working</p>
+                  <p class="app-notification__meta">5 min ago</p>
+                </div>
+              </a></li>
+            <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i
+                      class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
+                <div>
+                  <p class="app-notification__message">Transaction complete</p>
+                  <p class="app-notification__meta">2 days ago</p>
+                </div>
+              </a></li>
             <div class="app-notification__content">
-              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
+              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span
+                      class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
                   <div>
                     <p class="app-notification__message">Lisa sent you a mail</p>
                     <p class="app-notification__meta">2 min ago</p>
-                  </div></a></li>
-              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
+                  </div>
+                </a></li>
+              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span
+                      class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
                   <div>
                     <p class="app-notification__message">Mail server not working</p>
                     <p class="app-notification__meta">5 min ago</p>
-                  </div></a></li>
-              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
+                  </div>
+                </a></li>
+              <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span
+                      class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
                   <div>
                     <p class="app-notification__message">Transaction complete</p>
                     <p class="app-notification__meta">2 days ago</p>
-                  </div></a></li>
-              <div class="app-notification__content">
-                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></span>
-                    <div>
-                      <p class="app-notification__message">Lisa sent you a mail</p>
-                      <p class="app-notification__meta">2 min ago</p>
-                    </div></a></li>
-                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-danger"></i><i class="fa fa-hdd-o fa-stack-1x fa-inverse"></i></span></span>
-                    <div>
-                      <p class="app-notification__message">Mail server not working</p>
-                      <p class="app-notification__meta">5 min ago</p>
-                    </div></a></li>
-                <li><a class="app-notification__item" href="javascript:;"><span class="app-notification__icon"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x text-success"></i><i class="fa fa-money fa-stack-1x fa-inverse"></i></span></span>
-                    <div>
-                      <p class="app-notification__message">Transaction complete</p>
-                      <p class="app-notification__meta">2 days ago</p>
-                    </div></a></li>
-              </div>
+                  </div>
+                </a></li>
             </div>
-            <li class="app-notification__footer"><a href="#">See all notifications.</a></li>
-          </ul>
-        </li>
-        <!-- User Menu-->
-        <li class="dropdown" @mouseover="isUserVisible = true" @mouseleave="isUserVisible = false" @click="isUserVisible = true"><span class="app-nav__item" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></span>
-          <ul class="dropdown-menu settings-menu dropdown-menu-right" v-bind:class="{ show: isUserVisible }">
-            <li><router-link class="dropdown-item" to="user-profile"><i class="fa fa-user fa-lg"></i> Profile</router-link></li>
-            <li><router-link class="dropdown-item" to="/"><i class="fa fa-sign-out fa-lg"></i> Logout</router-link></li>
-          </ul>
-        </li>
+          </div>
+          <li class="app-notification__footer"><a href="#">See all notifications.</a></li>
+        </ul>
+      </li>
+      <!-- User Menu-->
+      <li class="dropdown" @mouseover="isUserVisible = true" @mouseleave="isUserVisible = false" @click="isUserVisible = true"><span
+          class="app-nav__item" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></span>
+        <ul class="dropdown-menu settings-menu dropdown-menu-right" v-bind:class="{ show: isUserVisible }">
+          <li>
+            <router-link class="dropdown-item" to="user-profile"><i class="fa fa-user fa-lg"></i> Profile</router-link>
+          </li>
+          <li>
+            <router-link class="dropdown-item" to="/"><i class="fa fa-sign-out fa-lg"></i> Logout</router-link>
+          </li>
+        </ul>
+      </li>
       <!-- Settings Menu-->
-      <li class="dropdown" @mouseover="isSettingsVisible = true" @mouseleave="isSettingsVisible = false" @click="isSettingsVisible = true"><span class="app-nav__item" data-toggle="dropdown" aria-label="Open Settings Menu"><i class="fa fa-cog fa-lg"></i></span>
+      <li class="dropdown" @mouseover="isSettingsVisible = true" @mouseleave="isSettingsVisible = false" @click="isSettingsVisible = true"><span
+          class="app-nav__item" data-toggle="dropdown" aria-label="Open Settings Menu"><i class="fa fa-cog fa-lg"></i></span>
         <ul class="dropdown-menu settings-menu dropdown-menu-right" v-bind:class="{ show: isSettingsVisible }">
           <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> App Settings</a></li>
-          <li><router-link class="dropdown-item" to="user-profile"><i class="fa fa-globe fa-lg"></i> About platform</router-link></li>
-          <li><router-link class="dropdown-item" to="user-profile"><i class="fa fa-users fa-lg"></i> Credits</router-link></li>
-          <li><router-link class="dropdown-item" to="/"><i class="fa fa-envelope fa-lg"></i> Contact</router-link></li>
+          <li>
+            <router-link class="dropdown-item" to="user-profile"><i class="fa fa-globe fa-lg"></i> About platform</router-link>
+          </li>
+          <li>
+            <router-link class="dropdown-item" to="user-profile"><i class="fa fa-users fa-lg"></i> Credits</router-link>
+          </li>
+          <li>
+            <router-link class="dropdown-item" to="/"><i class="fa fa-envelope fa-lg"></i> Contact</router-link>
+          </li>
         </ul>
       </li>
     </ul>
-    </ul>
-    </header>
+  </div>
 </section>
-

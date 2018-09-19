@@ -1,11 +1,11 @@
-import Header from '../Header/index.vue'
+import AppHeader from '../Header/index.vue'
 import UserLeftMenu from './UserLeftMenu/index.vue'
 import UserWorkingArea from './UserWorkingArea/index.vue'
 
 export default {
   name: 'user-dashboard',
   components: {
-    'app-header': Header,
+    'app-header': AppHeader,
     'app-userleftmenu':  UserLeftMenu,
     'app-userworkingarea': UserWorkingArea
   },
