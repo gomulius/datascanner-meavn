@@ -43,7 +43,7 @@ export default {
       const message = error;
       swal('Oh noo!', `${message}`, 'error');
       console.info('Authentication error', message);
-      this.$router.push('/');
+      this.$router.push({ name: 'Login' });
     })
      .then((response) => {
        window.localStorage.setItem('auth', response.data.token);
